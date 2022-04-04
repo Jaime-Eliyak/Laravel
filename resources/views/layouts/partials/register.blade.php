@@ -1,3 +1,5 @@
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,38 +38,37 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Registrarse</h1>
                             </div>
-                            <form class="user">
+                            <form action='{{route('register.registro')}}' method='POST' class="user">
+                                @csrf
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="text" class="form-control form-control-user" id="exampleFirstName"
-                                            placeholder="Nombre(s)">
+                                            placeholder="Nombre(s)" name="firstName">
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="text" class="form-control form-control-user" id="exampleLastName"
-                                            placeholder="Apellido(s)">
+                                            placeholder="Apellido(s)" name="lastName">
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <input type="email" class="form-control form-control-user" id="exampleInputEmail"
-                                        placeholder="Correo Electrónico">
+                                        placeholder="Correo Electrónico" name="email">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleInputPassword" placeholder="Contraseña">
+                                            id="exampleInputPassword" placeholder="Contraseña" name="password">
                                     </div>
                                     <div class="col-sm-6">
                                         <input type="password" class="form-control form-control-user"
-                                            id="exampleRepeatPassword" placeholder="Repetir Contraseña">
+                                            id="exampleRepeatPassword" placeholder="Repetir Contraseña" name="repeatPassword">
                                     </div>
                                 </div>
-                                <a href="login.html" class="btn btn-primary btn-user btn-block">
-                                    Registrar
-                                </a>
+                                <input type="submit" value="Registrar" name='registro' class="btn btn-primary btn-user btn-block">
                             </form>
                             <hr>
                             <div class="text-center">
-                                <a class="small" href="login.html">¿Ya tienes cuenta? Ingresa aquí!</a>
+                                <a class="small" href="registro">¿Ya tienes cuenta? Ingresa aquí!</a>
                             </div>
                         </div>
                     </div>
