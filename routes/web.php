@@ -14,3 +14,5 @@ Route::get('/login', function (){
 });
 
 Route::post('register',[RegisterController::class,'register'])->name('register.registro');
+
+Route::post('sanitizacion',[RegisterController::class,'sanitizacion'])->name('register.sanitizacion');
